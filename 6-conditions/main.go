@@ -46,3 +46,6 @@ func main() { //{ func, if else, for, switch, select
 		fmt.Println("a and b are equal and bigger than c")
 	}
 }
+
+// if a,b,c are equal say equal
+// if a ,b are equal but c is smaller then say a and b are equal and bigger
