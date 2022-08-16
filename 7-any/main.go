@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"reflect"
+	//"github.com/golang/protobuf/ptypes/any"
 )
 
 // any is nothing but interface{}
@@ -40,6 +41,15 @@ func main() {
 	fmt.Println("Value:", val, "Type:", reflect.TypeOf(val))
 
 	//fmt.Println(val)
+
+	var a any = 10
+	var b int = 20
+	var c float32 = 30
+
+	d := a.(int) + b + int(c)
+	e := a + b + c
+	fmt.Println("d = a + b+ c", d)
+
 }
 
 // a,b,c
