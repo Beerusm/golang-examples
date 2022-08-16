@@ -11,6 +11,7 @@ import (
 // byte is nothing but uint8
 
 // empty interface
+// type any = interface{}
 func main() {
 
 	//var val interface{} // this is called as empty interface. This is capable of holding any kind of value
@@ -49,7 +50,6 @@ func main() {
 	d := a.(int) + b + int(c)
 	e := a + b + c
 	fmt.Println("d = a + b+ c", d)
-
 }
 
 // a,b,c
