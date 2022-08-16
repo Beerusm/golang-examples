@@ -32,7 +32,7 @@ func main() { //{ func, if else, for, switch, select
 
 	// conversion either Spring or strconv
 
-	a, b, c = 49, 49, 49
+	a, b, c = 49, 49, 21
 
 	if a > b && a > c {
 		fmt.Println(a, "a is bigger")
@@ -40,6 +40,9 @@ func main() { //{ func, if else, for, switch, select
 		fmt.Println(b, "b is bigger")
 	} else if c > a && c > b {
 		fmt.Println(c, "c is bigger")
+	} else if a == b && b == c && c == a {
+		fmt.Println("a b and c are equal")
+	} else if a == b && b == a && (c < a && c < b) {
+		fmt.Println("a and b are equal and bigger than c")
 	}
-
 }
