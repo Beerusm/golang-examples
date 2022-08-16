@@ -55,13 +55,24 @@ func main() {
 	// swap
 	a, b, c := 10, 20, 30
 	fmt.Println("a:", a, "b:", b, "c:", c)
-	a, b, c = c, a, b
-	fmt.Println("a:", a, "b:", b, "c:", c)
-	// t := a
-	// a = b
-	// b = t
-	// a,b=b,a
+	//a, b, c = c, a, b
+	//fmt.Println("a:", a, "b:", b, "c:", c)
+	t := a
+	t2 := b
+	a = c
+	b = t
+	c = t2
+	fmt.Println("Beeru a:", a, "b:", b, "c:", c)
 
+	a, b, c = 10, 20, 30
+	a, b, c = swap3(a, b, c)
+	fmt.Println("func swap a:", a, "b:", b, "c:", c)
+	//a,b=b,a
+
+}
+
+func swap3(a int, b int, c int) (int, int, int) {
+	return c, a, b
 }
 
 // a,b,c
