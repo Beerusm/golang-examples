@@ -43,6 +43,18 @@ func main() {
 		print(arr4[i], " ")
 	}
 
+	println("\narray in reverse")
+	for i := len(arr4) - 1; i > 0; i-- {
+		print(arr4[i], " ")
+	}
+
+	min := arr4[0]
+	for _, v := range arr1 {
+		if v < min {
+			min = v
+		}
+	}
+	fmt.Println("Min value in arr4", min)
 	fmt.Println("Max value in arr4:", max)
 
 }
