@@ -1,5 +1,5 @@
 ### Keywords
-const,func, import, package,var
+break, case, const, continue, else, fallthrough, for, func, if, import,map, package,range,return,switch, var 
 
 ### Builtin functions
-print,println,complex
+append,cap,complex,copy,delete, len,make,print,println
