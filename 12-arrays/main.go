@@ -56,7 +56,6 @@ func main() {
 	}
 	fmt.Println("Min value in arr4", min)
 	fmt.Println("Max value in arr4:", max)
-
 }
 
 // reverse the array
