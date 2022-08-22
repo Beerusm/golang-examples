@@ -10,7 +10,7 @@ func main() {
 	slice1, _ = delete(slice1, 9)
 	fmt.Println("Len:", len(slice1), "cap:", cap(slice1), "slice1:", slice1)
 
-	slice4, _ := sliceDelete(slice1, 8)
+	slice4, _ := delete(slice1, 8)
 	fmt.Println("Len:", len(slice4), "cap:", cap(slice4), "slice4 after delete index 8:", slice4)
 
 	slice1, _ = insert(slice1, 5, 500)

@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	//"github.com/golang/protobuf/ptypes/any"
+)
 
 // slice, map , chan --> make to instantiate it
 // map is a reference type
@@ -44,8 +47,30 @@ func main() {
 
 	delete(mymap, "bangalore-1")
 
+	//var mymap2 map[string]any
+	var mymap2 = make(map[string]any)
+	fmt.Printf("print mymap2 before deep copy %v \n", mymap2)
+	err := deep_copy(mymap2, mymap)
+	if err != nil {
+		fmt.Printf("error %v in deep copy", err)
+	}
+	fmt.Printf("print mymap after deep copy %v \n", mymap)
+	fmt.Printf("print mymap2 after deep copy %v \n", mymap2)
+
 	// mymap1 := mymap
 
+}
+
+func deep_copy(m1 map[string]any, m2 map[string]any) error {
+
+	if m2 == nil {
+		fmt.Println("source map is nil")
+	}
+
+	for key, val := range m2 {
+		m1[key] = val
+	}
+	return nil
 }
 
 // perform deep copy of a map
